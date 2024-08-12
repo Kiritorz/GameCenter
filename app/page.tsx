@@ -24,7 +24,7 @@ export default function Home() {
     <div className="flex gap-4 justify-between md:justify-normal">
       <Gamepad className="hidden md:block size-10 my-auto" />
       <div className="text-2xl md:text-4xl text-left font-semibold flex flex-col md:flex-row gap-0 md:gap-3">
-        <span>K1ssInn Lee's</span>
+        <span>K1ssInn Lee&apos;s</span>
         <span className="text-warning">Game Center</span>
       </div>
       <Gamepad className="block md:hidden size-10 my-auto" />
