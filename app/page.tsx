@@ -19,12 +19,12 @@ export default function Home() {
           window.open("https://kiritorz.github.io/BlackJackOnline", "_blank")
         }}
       >
-        <CardHeader className="min-h-28 flex justify-start items-start">
+        <CardHeader className="min-h-28 flex flex-col items-start">
           <div className="flex flex-col gap-1">
-            <p className="text-3xl font-semibold line-clamp-1">
+            <p className="text-3xl font-semibold line-clamp-1 text-left">
               BlackJack
             </p>
-            <p className="text-default-400 leading-5 line-clamp-2">
+            <p className="text-default-400 leading-5 line-clamp-2 text-left">
               Catch a hand value as close to 21 without exceeding it.
             </p>
           </div>
@@ -49,12 +49,12 @@ export default function Home() {
           window.open("https://kiritorz.github.io/THG", "_blank")
         }}
       >
-        <CardHeader className="min-h-28 flex justify-start items-start">
+        <CardHeader className="min-h-28 flex flex-col items-start">
           <div className="flex flex-col gap-1">
-            <p className="text-3xl font-semibold line-clamp-1">
+            <p className="text-3xl font-semibold line-clamp-1 text-left">
               Taxes Hold&apos;em
             </p>
-            <p className="text-default-400 leading-5 line-clamp-2">
+            <p className="text-default-400 leading-5 line-clamp-2 text-left">
               Bet and bluff your way to victory.
             </p>
           </div>
