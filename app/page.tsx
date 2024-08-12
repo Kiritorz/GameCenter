@@ -6,6 +6,7 @@ export default function Home() {
   const Games = [
     (
       <Card
+        key="BlackJack"
         className={`
             w-full md:w-96 p-4
             bg-gradient-to-br from-secondary-100/50 to-default-50 md:hover:from-secondary-100/80
@@ -35,6 +36,7 @@ export default function Home() {
     ),
     (
       <Card
+        key="TexasHoldem"
         className={`
             w-full md:w-96 p-4
             bg-gradient-to-br from-primary-100/50 to-default-50 md:hover:from-primary-100/80
