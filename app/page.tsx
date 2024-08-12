@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <section className="font-serif flex flex-col md:pt-6 gap-8 md:gap-16">
       {GameCenterHeader}
-      <div className="mx-auto grid grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-2 gap-4 md:gap-8">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
         {
           Games.map((game, index) =>
             <GameCard
