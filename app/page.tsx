@@ -50,7 +50,7 @@ export default function Home() {
         <CardHeader className="min-h-28 flex justify-start items-start">
           <div className="flex flex-col gap-1">
             <p className="text-3xl font-semibold line-clamp-1">
-              Taxes Hold'em
+              Taxes Hold&apos;em
             </p>
             <p className="text-default-400 leading-5 line-clamp-2">
               Bet and bluff your way to victory.
