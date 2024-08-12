@@ -81,9 +81,7 @@ export default function Home() {
     <section className="font-serif flex flex-col md:pt-6 gap-8 md:gap-16">
       {GameCenterHeader}
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-        {
-          Games.map(Game => Game)
-        }
+        {Games.map(Game => Game)}
       </div>
     </section>
   );
