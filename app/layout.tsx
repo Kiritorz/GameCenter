@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className="bg-background font-sans antialiased"
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "dark", forcedTheme: "dark" }}>
           <div className="relative flex flex-col">
             <main className="container mx-auto max-w-7xl py-6 px-6 flex-grow">
               {children}

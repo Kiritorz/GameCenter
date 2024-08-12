@@ -1,23 +1,67 @@
 "use client"
-import { GameCard } from "@/components/game-card";
+import { Card, CardBody, CardHeader, Image } from "@nextui-org/react"
 import { Gamepad } from "lucide-react";
 
 export default function Home() {
   const Games = [
-    {
-      title: "BlackJack",
-      description: "Catch a hand value as close to 21 without exceeding it.",
-      color: "secondary",
-      src: "/game-blackjack.png",
-      url: "https://kiritorz.github.io/BlackJackOnline"
-    },
-    {
-      title: "Taxes Hold'em",
-      description: "Bet and bluff your way to victory.",
-      color: "primary",
-      src: "/game-texas-holdem.png",
-      url: "https://kiritorz.github.io/THG"
-    },
+    (
+      <Card
+        className={`
+            w-full md:w-96 p-4
+            bg-gradient-to-br from-secondary-100/50 to-default-50 md:hover:from-secondary-100/80
+            shadow shadow-secondary md:hover:shadow-secondary-600
+            select-none cursor-pointer
+            md:hover:scale-[1.01] md:active:scale-[0.99] transition ease-in-out
+        `}
+        isPressable
+        onClick={() => {
+          window.open("https://kiritorz.github.io/BlackJackOnline", "_blank")
+        }}
+      >
+        <CardHeader className="min-h-28 flex justify-start items-start">
+          <div className="flex flex-col gap-1">
+            <p className="text-3xl font-semibold line-clamp-1">
+              BlackJack
+            </p>
+            <p className="text-default-400 leading-5 line-clamp-2">
+              Catch a hand value as close to 21 without exceeding it.
+            </p>
+          </div>
+        </CardHeader>
+        <CardBody className="flex items-center">
+          <Image src="/game-blackjack.png" alt="BlackJack" draggable={false} />
+        </CardBody>
+      </Card>
+    ),
+    (
+      <Card
+        className={`
+            w-full md:w-96 p-4
+            bg-gradient-to-br from-primary-100/50 to-default-50 md:hover:from-primary-100/80
+            shadow shadow-primary md:hover:shadow-primary-600
+            select-none cursor-pointer
+            md:hover:scale-[1.01] md:active:scale-[0.99] transition ease-in-out
+        `}
+        isPressable
+        onPress={() => {
+          window.open("https://kiritorz.github.io/THG", "_blank")
+        }}
+      >
+        <CardHeader className="min-h-28 flex justify-start items-start">
+          <div className="flex flex-col gap-1">
+            <p className="text-3xl font-semibold line-clamp-1">
+              Taxes Hold'em
+            </p>
+            <p className="text-default-400 leading-5 line-clamp-2">
+              Bet and bluff your way to victory.
+            </p>
+          </div>
+        </CardHeader>
+        <CardBody className="flex items-center">
+          <Image src="/game-texas-holdem.png" alt="Taxes Hold'em" draggable={false} />
+        </CardBody>
+      </Card>
+    )
   ]
 
   const GameCenterHeader = (
@@ -36,15 +80,11 @@ export default function Home() {
       {GameCenterHeader}
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
         {
-          Games.map((game, index) =>
-            <GameCard
-              key={index}
-              title={game.title}
-              description={game.description}
-              color={game.color}
-              src={game.src}
-              url={game.url}
-            />)
+          Games.map((Game, index) => (
+            <div key={index}>
+              {Game}
+            </div>
+          ))
         }
       </div>
     </section>
